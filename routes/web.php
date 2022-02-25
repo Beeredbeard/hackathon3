@@ -4,5 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', 'AnimalsController@index');
 
-Route::get('/', 'AnimalsController@list');
+Route::get('/animal/{id}', 'AnimalsController@findAnimal');

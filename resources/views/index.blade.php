@@ -7,8 +7,14 @@
     <title>Clinic</title>
 </head>
 <body>
-    home page 
-
-    hold a list of animals
+    
+    <ul>
+        @foreach ($animals as $animal)
+        <li>
+            <a href="{{ action('AnimalsController@findAnimal',['id'=>$animal->id])}}">{{$animal->name}}</a>
+        </li>
+        
+        @endforeach
+    </ul>
 </body>
 </html>
