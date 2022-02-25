@@ -8,6 +8,7 @@
     <title>Name of pet: {{$animal->name}}</title>
 </head>
 <body>
+    <a href="\">Home</a>
     <div class="animal__container">
         <img src="/images/pets/{{strtolower($animal->name)}}.jpg" alt="image of lovely {{$animal->name ?? $animal->name.' is missing'}}">
         <div class="animal__details">

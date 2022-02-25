@@ -7,7 +7,7 @@
     <title>Clinic</title>
 </head>
 <body>
-    
+    @yield('navigation')
     @yield('search')
     <ul>
         @foreach ($animals as $animal)
