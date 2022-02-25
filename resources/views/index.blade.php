@@ -8,6 +8,7 @@
 </head>
 <body>
     
+    @yield('search')
     <ul>
         @foreach ($animals as $animal)
         <li>

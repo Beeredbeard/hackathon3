@@ -27,4 +27,19 @@ class AnimalsController extends Controller
 
         return view('animal', compact('animal'));
     }
+
+    public function search(Request $request){
+
+        // Get the search value from the request
+        $search = $request->input('search');
+    
+        // Search in the title and body columns from the animals table
+        $animals = Animals::query()
+            ->where('name', 'LIKE', '%' . $search . '%')
+            ->get();
+    
+        // Return the search view with the resluts compacted
+        return view('search', compact('animals'));
+        // dd($animals);
+    }
 }
