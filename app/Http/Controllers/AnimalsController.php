@@ -28,6 +28,12 @@ class AnimalsController extends Controller
         return view('animal', compact('animal'));
     }
 
+    public function filterByOwnerID($id)
+    {
+        $result = Animals::findAll()->where('owner_id', '=', $id);
+        dump($result);
+    }
+
     public function search(Request $request){
 
         // Get the search value from the request
